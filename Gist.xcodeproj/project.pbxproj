@@ -1,0 +1,278 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		24CF46B5132A43C400BC2150 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24CF46B4132A43C400BC2150 /* Cocoa.framework */; };
+		24CF46BF132A43C400BC2150 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 24CF46BD132A43C400BC2150 /* InfoPlist.strings */; };
+		24CF46C8132A46B200BC2150 /* GistPlugIn.m in Sources */ = {isa = PBXBuildFile; fileRef = 24CF46C7132A46B200BC2150 /* GistPlugIn.m */; };
+		24CF46D0132A4DEB00BC2150 /* Inspector.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24CF46CF132A4DEB00BC2150 /* Inspector.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		24CF46B1132A43C400BC2150 /* Gist.svxElement */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Gist.svxElement; sourceTree = BUILT_PRODUCTS_DIR; };
+		24CF46B4132A43C400BC2150 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		24CF46B7132A43C400BC2150 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		24CF46B8132A43C400BC2150 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		24CF46B9132A43C400BC2150 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		24CF46BC132A43C400BC2150 /* Gist-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Gist-Info.plist"; sourceTree = "<group>"; };
+		24CF46BE132A43C400BC2150 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		24CF46C0132A43C400BC2150 /* Gist-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Gist-Prefix.pch"; sourceTree = "<group>"; };
+		24CF46C6132A46B200BC2150 /* GistPlugIn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GistPlugIn.h; sourceTree = "<group>"; };
+		24CF46C7132A46B200BC2150 /* GistPlugIn.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GistPlugIn.m; sourceTree = "<group>"; };
+		24CF46CF132A4DEB00BC2150 /* Inspector.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Inspector.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		24CF46AE132A43C400BC2150 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				24CF46B5132A43C400BC2150 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		24CF46A6132A43C400BC2150 = {
+			isa = PBXGroup;
+			children = (
+				24CF46BA132A43C400BC2150 /* Gist */,
+				24CF46B3132A43C400BC2150 /* Frameworks */,
+				24CF46B2132A43C400BC2150 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		24CF46B2132A43C400BC2150 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				24CF46B1132A43C400BC2150 /* Gist.svxElement */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		24CF46B3132A43C400BC2150 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				24CF46B4132A43C400BC2150 /* Cocoa.framework */,
+				24CF46B6132A43C400BC2150 /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		24CF46B6132A43C400BC2150 /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				24CF46B7132A43C400BC2150 /* AppKit.framework */,
+				24CF46B8132A43C400BC2150 /* CoreData.framework */,
+				24CF46B9132A43C400BC2150 /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		24CF46BA132A43C400BC2150 /* Gist */ = {
+			isa = PBXGroup;
+			children = (
+				24CF46BB132A43C400BC2150 /* Supporting Files */,
+				24CF46C6132A46B200BC2150 /* GistPlugIn.h */,
+				24CF46C7132A46B200BC2150 /* GistPlugIn.m */,
+			);
+			path = Gist;
+			sourceTree = "<group>";
+		};
+		24CF46BB132A43C400BC2150 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				24CF46BC132A43C400BC2150 /* Gist-Info.plist */,
+				24CF46BD132A43C400BC2150 /* InfoPlist.strings */,
+				24CF46C0132A43C400BC2150 /* Gist-Prefix.pch */,
+				24CF46CF132A4DEB00BC2150 /* Inspector.xib */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		24CF46B0132A43C400BC2150 /* Gist */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 24CF46C3132A43C400BC2150 /* Build configuration list for PBXNativeTarget "Gist" */;
+			buildPhases = (
+				24CF46AD132A43C400BC2150 /* Sources */,
+				24CF46AE132A43C400BC2150 /* Frameworks */,
+				24CF46AF132A43C400BC2150 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Gist;
+			productName = Gist;
+			productReference = 24CF46B1132A43C400BC2150 /* Gist.svxElement */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		24CF46A8132A43C400BC2150 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				ORGANIZATIONNAME = "Daniel Tull";
+			};
+			buildConfigurationList = 24CF46AB132A43C400BC2150 /* Build configuration list for PBXProject "Gist" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 24CF46A6132A43C400BC2150;
+			productRefGroup = 24CF46B2132A43C400BC2150 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				24CF46B0132A43C400BC2150 /* Gist */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		24CF46AF132A43C400BC2150 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				24CF46BF132A43C400BC2150 /* InfoPlist.strings in Resources */,
+				24CF46D0132A4DEB00BC2150 /* Inspector.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		24CF46AD132A43C400BC2150 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				24CF46C8132A46B200BC2150 /* GistPlugIn.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		24CF46BD132A43C400BC2150 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				24CF46BE132A43C400BC2150 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		24CF46C1132A43C400BC2150 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = DEBUG;
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SYMROOT = "~/Library/Application Support/Sandvox/PlugIns/";
+				VALID_ARCHS = i386;
+			};
+			name = Debug;
+		};
+		24CF46C2132A43C400BC2150 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				SDKROOT = macosx;
+				SYMROOT = "~/Library/Application Support/Sandvox/PlugIns/";
+				VALID_ARCHS = i386;
+			};
+			name = Release;
+		};
+		24CF46C4132A43C400BC2150 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				BUNDLE_LOADER = /Applications/Sandvox.app/Contents/MacOS/Sandvox;
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Gist/Gist-Prefix.pch";
+				HEADER_SEARCH_PATHS = /Applications/Sandvox.app/Contents/Headers;
+				INFOPLIST_FILE = "Gist/Gist-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Bundles";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SYMROOT = "/Users/danielctull/Library/Application Support/Sandvox/PlugIns";
+				WRAPPER_EXTENSION = svxElement;
+			};
+			name = Debug;
+		};
+		24CF46C5132A43C400BC2150 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				BUNDLE_LOADER = /Applications/Sandvox.app/Contents/MacOS/Sandvox;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Gist/Gist-Prefix.pch";
+				HEADER_SEARCH_PATHS = /Applications/Sandvox.app/Contents/Headers;
+				INFOPLIST_FILE = "Gist/Gist-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Bundles";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SYMROOT = "/Users/danielctull/Library/Application Support/Sandvox/PlugIns";
+				WRAPPER_EXTENSION = svxElement;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		24CF46AB132A43C400BC2150 /* Build configuration list for PBXProject "Gist" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				24CF46C1132A43C400BC2150 /* Debug */,
+				24CF46C2132A43C400BC2150 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		24CF46C3132A43C400BC2150 /* Build configuration list for PBXNativeTarget "Gist" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				24CF46C4132A43C400BC2150 /* Debug */,
+				24CF46C5132A43C400BC2150 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 24CF46A8132A43C400BC2150 /* Project object */;
+}
