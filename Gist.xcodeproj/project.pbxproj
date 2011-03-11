@@ -180,7 +180,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
-				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)";
+				CONFIGURATION_BUILD_DIR = "~/Library/Application Support/Sandvox/";
+				CONFIGURATION_TEMP_DIR = "";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = DEBUG;
@@ -192,7 +193,7 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.6;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = macosx;
-				SYMROOT = "~/Library/Application Support/Sandvox/PlugIns/";
+				SYMROOT = "";
 				VALID_ARCHS = i386;
 			};
 			name = Debug;
@@ -201,7 +202,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
-				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)";
+				CONFIGURATION_BUILD_DIR = "~/Library/Application Support/Sandvox/";
+				CONFIGURATION_TEMP_DIR = "";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -209,7 +211,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				MACOSX_DEPLOYMENT_TARGET = 10.6;
 				SDKROOT = macosx;
-				SYMROOT = "~/Library/Application Support/Sandvox/PlugIns/";
+				SYMROOT = "";
 				VALID_ARCHS = i386;
 			};
 			name = Release;
@@ -228,7 +230,7 @@
 				INFOPLIST_FILE = "Gist/Gist-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Bundles";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SYMROOT = "/Users/danielctull/Library/Application Support/Sandvox/PlugIns";
+				SYMROOT = "";
 				WRAPPER_EXTENSION = svxElement;
 			};
 			name = Debug;
@@ -247,7 +249,7 @@
 				INFOPLIST_FILE = "Gist/Gist-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Bundles";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SYMROOT = "/Users/danielctull/Library/Application Support/Sandvox/PlugIns";
+				SYMROOT = "";
 				WRAPPER_EXTENSION = svxElement;
 			};
 			name = Release;
@@ -271,6 +273,7 @@
 				24CF46C5132A43C400BC2150 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
