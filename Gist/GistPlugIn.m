@@ -28,6 +28,12 @@
 
 }
 
+- (void)makeOriginalSize;
+{
+    // Generally want to fill the space available with out content
+    [self setWidth:nil height:nil];
+}
+
 - (void)dealloc {
 	[gistID release], gistID = nil;
 	[super dealloc];
