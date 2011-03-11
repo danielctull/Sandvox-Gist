@@ -24,9 +24,7 @@
     [context addDependencyForKeyPath:@"gistID" ofObject:self];
     
     NSString *string = [NSString stringWithFormat:@"http://gist.github.com/%@.js", self.gistID];
-    
-    [context startElement:@"script" attributes:[NSDictionary dictionaryWithObject:string forKey:@"src"]];
-    [context endElement];
+    [context writeJavascriptWithSrc:string];
 
 }
 
