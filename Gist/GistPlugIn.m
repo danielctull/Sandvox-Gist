@@ -13,6 +13,9 @@
 
 @synthesize gistID;
 
++ (NSArray *)plugInKeys {
+    return [NSArray arrayWithObject:@"gistID"];
+}
 
 - (void)writeHTML:(id<SVPlugInContext>)context {
     [super writeHTML:context];
