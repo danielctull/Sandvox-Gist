@@ -23,9 +23,15 @@
     // add dependencies
     [context addDependencyForKeyPath:@"gistID" ofObject:self];
     
-    NSString *string = [NSString stringWithFormat:@"http://gist.github.com/%@.js", self.gistID];
-    [context writeJavascriptWithSrc:string];
-
+    if (self.gistID)
+    {
+        NSString *string = [NSString stringWithFormat:@"http://gist.github.com/%@.js", self.gistID];
+        [context writeJavascriptWithSrc:string];
+    }
+    else
+    {
+        [context writePlaceholderWithText:@"Enter a Gist ID in the Inspector" options:0];
+    }
 }
 
 - (void)makeOriginalSize;
