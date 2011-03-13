@@ -25,8 +25,15 @@
     
     if (self.gistID)
     {
-        NSString *string = [NSString stringWithFormat:@"http://gist.github.com/%@.js", self.gistID];
-        [context writeJavascriptWithSrc:string];
+        if ([context liveDataFeeds])
+        {
+            NSString *string = [NSString stringWithFormat:@"http://gist.github.com/%@.js", self.gistID];
+            [context writeJavascriptWithSrc:string];
+        }
+        else
+        {
+            [context writePlaceholderWithText:[@"gist: " stringByAppendingString:self.gistID] options:0];
+        }
     }
     else
     {
