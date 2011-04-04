@@ -179,7 +179,7 @@
 		24CF46C1132A43C400BC2150 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
 				CONFIGURATION_BUILD_DIR = "~/Library/Application Support/Sandvox/PlugIns/";
 				CONFIGURATION_TEMP_DIR = "";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -201,7 +201,7 @@
 		24CF46C2132A43C400BC2150 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
 				CONFIGURATION_BUILD_DIR = "~/Library/Application Support/Sandvox/PlugIns/";
 				CONFIGURATION_TEMP_DIR = "";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
