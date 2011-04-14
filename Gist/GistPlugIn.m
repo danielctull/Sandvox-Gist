@@ -28,7 +28,7 @@
         if ([context liveDataFeeds])
         {
             NSString *string = [NSString stringWithFormat:@"http://gist.github.com/%@.js", self.gistID];
-            [context writeJavascriptWithSrc:string];
+            [context writeJavascriptWithSrc:string encoding:NSUTF8StringEncoding];
         }
         else
         {
