@@ -29,6 +29,18 @@
         {
             NSString *string = [NSString stringWithFormat:@"http://gist.github.com/%@.js", self.gistID];
             [context writeJavascriptWithSrc:string encoding:NSUTF8StringEncoding];
+            
+            // For browsers/environments without javascript, link to the gist
+            [context startElement:@"noscript"];
+            {
+                string = [NSString stringWithFormat:@"https://gist.github.com/%@", self.gistID];
+                [context startAnchorElementWithHref:string title:nil target:nil rel:nil];
+                {
+                    [context writeCharacters:[@"gist: " stringByAppendingString:self.gistID]];
+                }
+                [context endElement];
+            }
+            [context endElement];
         }
         else
         {
