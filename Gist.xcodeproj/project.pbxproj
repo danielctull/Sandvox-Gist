@@ -78,9 +78,10 @@
 		24CF46BA132A43C400BC2150 /* Gist */ = {
 			isa = PBXGroup;
 			children = (
-				24CF46BB132A43C400BC2150 /* Supporting Files */,
 				24CF46C6132A46B200BC2150 /* GistPlugIn.h */,
 				24CF46C7132A46B200BC2150 /* GistPlugIn.m */,
+				24CF46CF132A4DEB00BC2150 /* Inspector.xib */,
+				24CF46BB132A43C400BC2150 /* Supporting Files */,
 			);
 			path = Gist;
 			sourceTree = "<group>";
@@ -91,7 +92,6 @@
 				24CF46BC132A43C400BC2150 /* Gist-Info.plist */,
 				24CF46BD132A43C400BC2150 /* InfoPlist.strings */,
 				24CF46C0132A43C400BC2150 /* Gist-Prefix.pch */,
-				24CF46CF132A4DEB00BC2150 /* Inspector.xib */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -179,7 +179,7 @@
 		24CF46C1132A43C400BC2150 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				CONFIGURATION_BUILD_DIR = "~/Library/Application Support/Sandvox/PlugIns/";
 				CONFIGURATION_TEMP_DIR = "";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -202,7 +202,7 @@
 		24CF46C2132A43C400BC2150 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				CONFIGURATION_BUILD_DIR = "~/Library/Application Support/Sandvox/PlugIns/";
 				CONFIGURATION_TEMP_DIR = "";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
