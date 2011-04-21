@@ -18,4 +18,6 @@
     [[self.gistIdField cell] setFormatter:formatter];
     [formatter release];
 }
+
+
 @end

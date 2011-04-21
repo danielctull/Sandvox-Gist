@@ -7,6 +7,7 @@
 //
 
 #import "GistPlugIn.h"
+#import "GistURLFormatter.h"
 
 
 @implementation GistPlugIn
@@ -15,6 +16,33 @@
 
 + (NSArray *)plugInKeys {
     return [NSArray arrayWithObject:@"gistID"];
+}
+
+- (void)awakeFromNew {
+    [super awakeFromNew];
+    
+    // Get the address from the browser
+    id browserAddress = [[NSWorkspace sharedWorkspace] fetchBrowserWebLocation];
+    
+    if (!browserAddress) {
+        return;
+    }
+    
+    NSString *candidateURLString = [[browserAddress URL] absoluteString];
+    
+    GistURLFormatter *formatter = [[GistURLFormatter alloc] init];
+    
+    NSString *theGistId = nil;
+    
+    BOOL isValidGistId = [formatter getObjectValue:&theGistId forString:candidateURLString errorDescription:NULL];
+    [formatter release];
+    
+    if (!isValidGistId) {
+        return;
+    }
+    
+    self.gistID = theGistId;
+    
 }
 
 - (void)writeHTML:(id<SVPlugInContext>)context {
