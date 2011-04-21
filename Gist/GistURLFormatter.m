@@ -107,7 +107,10 @@ BOOL isNumeric(NSString *aString);
         return NO;
     }
     
-    *anObject = gistId;
+    if (anObject) {
+        *anObject = gistId;
+    }
+    
     return YES;
 }
 
