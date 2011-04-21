@@ -92,4 +92,54 @@
 	[super dealloc];
 }
 
+#pragma mark - Drag and drop
+
++ (NSArray *)readableTypesForPasteboard:(NSPasteboard *)pasteboard {
+    return SVWebLocationGetReadablePasteboardTypes(pasteboard);
+}
+
++ (SVPasteboardPriority)priorityForPasteboardItem:(id<SVPasteboardItem>)item {
+    NSString *candidateURLString = [[item URL] absoluteString];
+    
+    if (!candidateURLString) {
+        return [super priorityForPasteboardItem:item];
+    }
+    
+    GistURLFormatter *formatter = [[GistURLFormatter alloc] init];
+    
+    BOOL isValidGistId = [formatter getObjectValue:NULL forString:candidateURLString errorDescription:NULL];
+    [formatter release];
+    
+    if (!isValidGistId) {
+        return SVPasteboardPriorityNone;
+    }
+    
+    return SVPasteboardPrioritySpecialized;    
+}
+
+- (BOOL)awakeFromPasteboardItems:(NSArray *)items {
+    if (!items && ![items count]) {
+        return NO;
+    }
+    
+    id <SVPasteboardItem, SVWebLocation> item = [items objectAtIndex:0];
+    if (![item conformsToProtocol:@protocol(SVWebLocation)]) {
+        return NO;
+    }
+    
+    NSString *theGistId = nil;
+    GistURLFormatter *formatter = [[GistURLFormatter alloc] init];
+    
+    BOOL isValidGistId = [formatter getObjectValue:&theGistId forString:[[item URL] absoluteString] errorDescription:NULL];
+    [formatter release];
+    
+    if (!isValidGistId) {
+        return NO;
+    }
+    
+    self.gistID = theGistId;
+    return YES;
+
+}
+
 @end
