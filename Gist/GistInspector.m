@@ -7,22 +7,15 @@
 //
 
 #import "GistInspector.h"
+#import "GistURLFormatter.h"
 
 
 @implementation GistInspector
 @synthesize gistIdField;
 
-- (id)init {
-    self = [super init];
-    if (self) {
-        // Initialization code here.
-    }
-    NSLog(@"Controller created");
-    return self;
+- (void)awakeFromNib {
+    GistURLFormatter *formatter = [[GistURLFormatter alloc] init];
+    [[self.gistIdField cell] setFormatter:formatter];
+    [formatter release];
 }
-
-- (void)dealloc {
-    [super dealloc];
-}
-
 @end
