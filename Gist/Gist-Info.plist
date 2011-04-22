@@ -32,5 +32,7 @@
 	<string>GistPlugIn</string>
 	<key>SVMinimumAppVersion</key>
 	<string>2.0</string>
+	<key>SVPlugInIconPath</key>
+	<string>Gist.icns</string>
 </dict>
 </plist>

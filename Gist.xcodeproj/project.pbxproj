@@ -11,6 +11,7 @@
 		24CF46BF132A43C400BC2150 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 24CF46BD132A43C400BC2150 /* InfoPlist.strings */; };
 		24CF46C8132A46B200BC2150 /* GistPlugIn.m in Sources */ = {isa = PBXBuildFile; fileRef = 24CF46C7132A46B200BC2150 /* GistPlugIn.m */; };
 		24CF46D0132A4DEB00BC2150 /* Inspector.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24CF46CF132A4DEB00BC2150 /* Inspector.xib */; };
+		EE00F86C136192A300046439 /* Gist.icns in Resources */ = {isa = PBXBuildFile; fileRef = EE00F86B136192A300046439 /* Gist.icns */; };
 		EE71F6D913609C6500E4B0D9 /* GistInspector.m in Sources */ = {isa = PBXBuildFile; fileRef = EE71F6D813609C6500E4B0D9 /* GistInspector.m */; };
 		EE71F6DD13609EA600E4B0D9 /* GistURLFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = EE71F6DC13609EA600E4B0D9 /* GistURLFormatter.m */; };
 /* End PBXBuildFile section */
@@ -27,6 +28,7 @@
 		24CF46C6132A46B200BC2150 /* GistPlugIn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GistPlugIn.h; sourceTree = "<group>"; };
 		24CF46C7132A46B200BC2150 /* GistPlugIn.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GistPlugIn.m; sourceTree = "<group>"; };
 		24CF46CF132A4DEB00BC2150 /* Inspector.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Inspector.xib; sourceTree = "<group>"; };
+		EE00F86B136192A300046439 /* Gist.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = Gist.icns; sourceTree = "<group>"; };
 		EE71F6D713609C6500E4B0D9 /* GistInspector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GistInspector.h; sourceTree = "<group>"; };
 		EE71F6D813609C6500E4B0D9 /* GistInspector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GistInspector.m; sourceTree = "<group>"; };
 		EE71F6DB13609EA600E4B0D9 /* GistURLFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GistURLFormatter.h; sourceTree = "<group>"; };
@@ -99,6 +101,7 @@
 		24CF46BB132A43C400BC2150 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				EE00F86B136192A300046439 /* Gist.icns */,
 				24CF46BC132A43C400BC2150 /* Gist-Info.plist */,
 				24CF46BD132A43C400BC2150 /* InfoPlist.strings */,
 				24CF46C0132A43C400BC2150 /* Gist-Prefix.pch */,
@@ -158,6 +161,7 @@
 			files = (
 				24CF46BF132A43C400BC2150 /* InfoPlist.strings in Resources */,
 				24CF46D0132A4DEB00BC2150 /* Inspector.xib in Resources */,
+				EE00F86C136192A300046439 /* Gist.icns in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
