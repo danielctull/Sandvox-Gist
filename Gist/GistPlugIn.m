@@ -94,10 +94,6 @@
 
 #pragma mark - Drag and drop
 
-+ (NSArray *)readableTypesForPasteboard:(NSPasteboard *)pasteboard {
-    return SVWebLocationGetReadablePasteboardTypes(pasteboard);
-}
-
 + (SVPasteboardPriority)priorityForPasteboardItem:(id<SVPasteboardItem>)item {
     NSString *candidateURLString = [[item URL] absoluteString];
     
