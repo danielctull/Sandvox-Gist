@@ -95,18 +95,13 @@
 #pragma mark - Drag and drop
 
 + (SVPasteboardPriority)priorityForPasteboardItem:(id<SVPasteboardItem>)item {
-    NSString *candidateURLString = [[item URL] absoluteString];
-    
-    if (!candidateURLString) {
+    // We're only interested in URLs from gist.github.com
+    if (![item URL] || [[item URL] isFileURL]) {
         return [super priorityForPasteboardItem:item];
     }
     
-    GistURLFormatter *formatter = [[GistURLFormatter alloc] init];
-    
-    BOOL isValidGistId = [formatter getObjectValue:NULL forString:candidateURLString errorDescription:NULL];
-    [formatter release];
-    
-    if (!isValidGistId) {
+    NSString *hostString = [[item URL] host];
+    if (!hostString || !([hostString caseInsensitiveCompare:@"gist.github.com"] == NSOrderedSame)) {
         return SVPasteboardPriorityNone;
     }
     
@@ -118,8 +113,8 @@
         return NO;
     }
     
-    id <SVPasteboardItem, SVWebLocation> item = [items objectAtIndex:0];
-    if (![item conformsToProtocol:@protocol(SVWebLocation)]) {
+    id <SVPasteboardItem> item = [items objectAtIndex:0];
+    if (![item respondsToSelector:@selector(URL)]) {
         return NO;
     }
     
