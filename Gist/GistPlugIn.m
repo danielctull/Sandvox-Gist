@@ -94,6 +94,11 @@
 
 #pragma mark - Drag and drop
 
++ (NSArray *)readableTypesForPasteboard:(NSPasteboard *)pasteboard {
+    // Just get the URL types
+    return [self readableURLTypesForPasteboard:pasteboard];
+}
+
 + (SVPasteboardPriority)priorityForPasteboardItem:(id<SVPasteboardItem>)item {
     // We're only interested in URLs from gist.github.com
     if (![item URL] || [[item URL] isFileURL]) {
