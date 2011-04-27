@@ -22,7 +22,7 @@
     [super awakeFromNew];
     
     // Get the address from the browser
-    id browserAddress = [[NSWorkspace sharedWorkspace] fetchBrowserWebLocation];
+    id <SVPasteboardItem> browserAddress = [[NSWorkspace sharedWorkspace] fetchBrowserWebLocation];
     
     if (!browserAddress) {
         return;
