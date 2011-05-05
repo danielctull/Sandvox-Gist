@@ -45,40 +45,34 @@
     
 }
 
+- (NSString *)placeholderString {
+    // This is what will show if the plug-in's HTML cannot be displayed
+    if (!self.gistID) {
+        return @"Enter a Gist ID in the Inspector";
+    }
+    return [@"gist: " stringByAppendingString:self.gistID];
+}
+
 - (void)writeHTML:(id<SVPlugInContext>)context {
     [super writeHTML:context];
 
     // add dependencies
     [context addDependencyForKeyPath:@"gistID" ofObject:self];
     
-    if (self.gistID)
+    NSString *string = [NSString stringWithFormat:@"http://gist.github.com/%@.js", self.gistID];
+    [context writeJavascriptWithSrc:string encoding:NSUTF8StringEncoding];
+                
+    // For browsers/environments without javascript, link to the gist
+    [context startElement:@"noscript"];
     {
-        if ([context liveDataFeeds])
+        string = [NSString stringWithFormat:@"https://gist.github.com/%@", self.gistID];
+        [context startAnchorElementWithHref:string title:nil target:nil rel:nil];
         {
-            NSString *string = [NSString stringWithFormat:@"http://gist.github.com/%@.js", self.gistID];
-            [context writeJavascriptWithSrc:string encoding:NSUTF8StringEncoding];
-            
-            // For browsers/environments without javascript, link to the gist
-            [context startElement:@"noscript"];
-            {
-                string = [NSString stringWithFormat:@"https://gist.github.com/%@", self.gistID];
-                [context startAnchorElementWithHref:string title:nil target:nil rel:nil];
-                {
-                    [context writeCharacters:[@"gist: " stringByAppendingString:self.gistID]];
-                }
-                [context endElement];
-            }
-            [context endElement];
+            [context writeCharacters:[@"gist: " stringByAppendingString:self.gistID]];
         }
-        else
-        {
-            [context writePlaceholderWithText:[@"gist: " stringByAppendingString:self.gistID] options:0];
+        [context endElement];
         }
-    }
-    else
-    {
-        [context writePlaceholderWithText:@"Enter a Gist ID in the Inspector" options:0];
-    }
+    [context endElement];
 }
 
 - (void)makeOriginalSize;
