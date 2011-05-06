@@ -19,7 +19,7 @@
 	<key>CFBundlePackageType</key>
 	<string>BNDL</string>
 	<key>CFBundleShortVersionString</key>
-	<string>1.4</string>
+	<string>1.5</string>
 	<key>CFBundleSignature</key>
 	<string>Svox</string>
 	<key>CFBundleVersion</key>
@@ -34,5 +34,7 @@
 	<string>2.0</string>
 	<key>SVPlugInIconPath</key>
 	<string>Gist.icns</string>
+	<key>SVPlugInDescription</key>
+	<string>Insert the contents of a Github Gist</string>
 </dict>
 </plist>

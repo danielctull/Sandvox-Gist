@@ -1,0 +1,4 @@
+h1. A Sandvox plugin to insert Github Gists into your page
+
+See "http://danielctull.github.com/Sandvox-Gist":http://danielctull.github.com/Sandvox-Gist for more.
+
