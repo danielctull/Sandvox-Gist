@@ -57,18 +57,20 @@
     [super writeHTML:context];
 
     // add dependencies
+    NSString *gistID = self.gistID;
     [context addDependencyForKeyPath:@"gistID" ofObject:self];
+    if (!gistID.length) return;
     
-    NSString *string = [NSString stringWithFormat:@"http://gist.github.com/%@.js", self.gistID];
+    NSString *string = [NSString stringWithFormat:@"http://gist.github.com/%@.js", gistID];
     [context writeJavascriptWithSrc:string encoding:NSUTF8StringEncoding];
                 
     // For browsers/environments without javascript, link to the gist
     [context startElement:@"noscript"];
     {
-        string = [NSString stringWithFormat:@"https://gist.github.com/%@", self.gistID];
+        string = [NSString stringWithFormat:@"https://gist.github.com/%@", gistID];
         [context startAnchorElementWithHref:string title:nil target:nil rel:nil];
         {
-            [context writeCharacters:[@"gist: " stringByAppendingString:self.gistID]];
+            [context writeCharacters:[@"gist: " stringByAppendingString:gistID]];
         }
         [context endElement];
         }
@@ -82,7 +84,7 @@
 }
 
 - (void)dealloc {
-	[gistID release], gistID = nil;
+	[_gistID release], _gistID = nil;
 	[super dealloc];
 }
 
