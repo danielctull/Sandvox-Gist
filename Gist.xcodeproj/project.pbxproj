@@ -220,7 +220,6 @@
 				RUN_CLANG_STATIC_ANALYZER = YES;
 				SDKROOT = macosx;
 				SYMROOT = "";
-				VALID_ARCHS = i386;
 			};
 			name = Debug;
 		};
@@ -247,7 +246,6 @@
 				RUN_CLANG_STATIC_ANALYZER = YES;
 				SDKROOT = macosx;
 				SYMROOT = "";
-				VALID_ARCHS = i386;
 			};
 			name = Release;
 		};
