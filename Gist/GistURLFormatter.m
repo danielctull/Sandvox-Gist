@@ -37,7 +37,7 @@
 
 @interface GistURLFormatter ()
 
-BOOL isNumeric(NSString *aString);
+BOOL isHexadecimal(NSString *aString);
 
 @end
 
@@ -100,7 +100,7 @@ BOOL isNumeric(NSString *aString);
     }
     
     NSString *gistId = [urlComponents objectAtIndex:gistIdIndex];
-    if (!(isNumeric(gistId)) || !([gistId length])) {
+    if (!(isHexadecimal(gistId)) || !([gistId length])) {
         if (errorDescription) {
             *errorDescription = @"Not a valid Gist URL";
         }
@@ -121,10 +121,10 @@ BOOL isNumeric(NSString *aString);
 
 #pragma mark - Private functions
 
-BOOL isNumeric(NSString *aString) {
+BOOL isHexadecimal(NSString *aString) {
     NSCharacterSet *charactersInString = [NSCharacterSet characterSetWithCharactersInString:aString];
     
-    if (!([[NSCharacterSet decimalDigitCharacterSet] isSupersetOfSet:charactersInString])) {
+    if (!([[NSCharacterSet characterSetWithCharactersInString:@"1234567890abcdef"] isSupersetOfSet:charactersInString])) {
         return NO;
     }
     return YES;
