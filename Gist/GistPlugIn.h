@@ -11,7 +11,7 @@
 @interface GistPlugIn : SVPlugIn {
 
 @private
-	NSString *gistID;
+	NSString *_gistID;
 
 }
 

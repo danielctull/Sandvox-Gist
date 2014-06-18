@@ -12,7 +12,7 @@
 
 @implementation GistPlugIn
 
-@synthesize gistID;
+@synthesize gistID = _gistID;
 
 + (NSArray *)plugInKeys {
     return [NSArray arrayWithObject:@"gistID"];
